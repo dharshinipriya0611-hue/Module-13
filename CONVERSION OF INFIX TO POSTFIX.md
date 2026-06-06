@@ -28,13 +28,43 @@ To write a Python program to convert a given Infix expression to Postfix express
 ---
 
 ### PROGRAM
+~~~
+#Reg.No: 212223090004
+#Name: D Dharshini priya
 
-```
-
-```
+Operators = set(['-', '*', '+','(',')']) # collection of Operators
+Priority = {'-':1,'*':2,'+':3}  
+ 
+def infixToPostfix(expression): 
+    stack = [] # initialization of empty stack
+    output = '' 
+    
+    for character in expression:
+        if character not in Operators:  # if an operand append in postfix expression
+            output+= character
+        elif character=='(':  # else Operators push onto stack
+            stack.append('(')
+        elif character==')':
+            while stack and stack[-1]!= '(':
+                output+=stack.pop()
+            stack.pop()
+        else: 
+            while stack and stack[-1]!='(' and Priority[character]<=Priority[stack[-1]]:
+                output+=stack.pop()
+            stack.append(character)
+    while stack:
+        output+=stack.pop()
+    return output
+expression = input()
+print('infix notation: ',expression)
+print('postfix notation: ',infixToPostfix(expression))
+~~~
 
 ### OUTPUT
+<img width="1103" height="254" alt="image" src="https://github.com/user-attachments/assets/05e30c82-6a1e-4dbf-a563-4469f04b310d" />
+
 
 
 ### RESULT
+Thus the program is created and verified successfully.
 
