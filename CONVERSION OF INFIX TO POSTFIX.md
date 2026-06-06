@@ -32,7 +32,7 @@ To write a Python program to convert a given Infix expression to Postfix express
 #Reg.No: 212223090004
 #Name: D Dharshini priya
 
-Operators = set(['-', '*', '+','(',')']) # collection of Operators
+Operators = set(['-', '*', '+','(',')']) 
 Priority = {'-':1,'*':2,'+':3}  
  
 def infixToPostfix(expression): 
@@ -40,9 +40,9 @@ def infixToPostfix(expression):
     output = '' 
     
     for character in expression:
-        if character not in Operators:  # if an operand append in postfix expression
+        if character not in Operators:  
             output+= character
-        elif character=='(':  # else Operators push onto stack
+        elif character=='(':  
             stack.append('(')
         elif character==')':
             while stack and stack[-1]!= '(':
