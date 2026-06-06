@@ -30,15 +30,27 @@ Consider the names of the tower pegs as A, B, C. Get the number of disks value f
 ---
 
 ### PROGRAM  
+~~~
+Reg.No: 212223090004
+Name: D Dharshini priya
 
-```
+def TowerOfHanoi(n , source, destination, auxiliary):
+	
+	if(n>0):
+	    TowerOfHanoi(n-1, source, auxiliary, destination)
+	    print ("Move disk from",source,"to",destination)
+	    TowerOfHanoi(n-1, auxiliary, destination, source)
 
-
-```
+n=int(input())		
+print("No. of disks =",n)
+~~~
 
 ### OUTPUT
+<img width="1081" height="844" alt="image" src="https://github.com/user-attachments/assets/b9b290da-4995-47c6-9352-fcd03e641be7" />
+
 
 
 
 ### RESULT
+Thus the program is created and verified.
 
