@@ -9,23 +9,43 @@ To write a Python program to implement a stack using a list and its built-in met
 ---
 
 ### ALGORITHM
-
-1. **Start the program.**
-2. **Define a class `st`** with the following methods:
-   - `push(self, num)`: Adds the number `num` to the stack.
-   - `pop(self)`: Removes and returns the top element from the stack.
-3. **Create a stack object `s`** using the class `st`.
-4. **Input the stack size**: Take an integer input `size` to define the size of the stack.
-5. **Loop through numbers from 1 to size**: Add only the odd numbers to the stack using the `push()` method.
-6. **Display the elements** in the stack after the loop completes.
-7. **Call `pop()`** to remove the top element from the stack and display the popped element.
-8. **Display the stack again** to show the remaining elements.
-9. **End the program.**
-
+---
+1. Start the program.
+2. Initialize an empty list called stack.
+3. Repeat 5 times (for i = 1 to 5):
+4. Take input from the user.
+5. Append the input to the stack using append().
+6. Display "Stack before elements are popped".
+7. Print the current contents of stack.
+8. Repeat 2 times (for i = 1 to 2):
+9. Remove the last element from the stack using pop().
+10. Display "Stack after elements are popped".
+11. Print the updated contents of stack.
+12. End the program.**
 ---
 
 ### PROGRAM
 
-```
+~~~
+Reg.no: 212223090004
+Name: D Dharshini priya
 
-```
+stack = []
+for i in range (5):
+    a=input()
+    stack.append(a)
+print("Stack before elements are popped")
+print(stack)
+print()
+for i in range(2):
+    stack.pop()
+print('Stack after elements are popped:')
+print(stack)
+~~~
+
+### OUTPUT
+<img width="1519" height="700" alt="image" src="https://github.com/user-attachments/assets/5cd65675-49a0-4a8e-bc76-c5e16b69ee8c" />
+
+### RESULT
+Thus the program is created and verified.
+
